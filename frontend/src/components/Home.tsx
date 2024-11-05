@@ -1,78 +1,141 @@
 import React from 'react';
-import img1 from '../assets/home1.jpg'
-import img2 from '../assets/home2.jpg'
-import img3 from '../assets/home3.jpg'
-import img4 from '../assets/home4.jpg'
-import img5 from '../assets/home5.png'
-import rev1 from '../assets/rev1.png'
-import rev2 from '../assets/rev2.png'
-import rev3 from '../assets/rev3.png'
-import logo from '../assets/logo2.png'
+import { motion } from 'framer-motion';
+import img1 from '../assets/home1.jpg';
+import img2 from '../assets/home2.jpg';
+import img3 from '../assets/home3.jpg';
+import rev1 from '../assets/rev1.png';
+import logo from '../assets/logo2.png';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/700.css';
 
-const Home = () => {
+interface Review {
+  text: string;
+  author?: string;
+}
+
+const Home: React.FC = () => {
+  const reviews: Review[] = [
+    { text: "Laurentine Castelino is grateful to ElderMate for assisting with daily groceries." },
+    { text: "ElderMate's mate taught me how to shop online, making life easier." },
+    { text: "My ElderMate companion has been a wonderful source of company and support. We go for walks together and have the best conversations." }
+  ];
+
+  const fadeIn = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
+  };
+
   return (
-    <section className="flex flex-col items-center justify-between bg-[#fdf9f4] p-8 rounded-lg max-w-7xl mx-auto">
-      <img className="w-1/3" src={logo} alt="ElderMate Logo" />
+    <div className="min-h-screen bg-[#fdf9f4] font-['Poppins']">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Hero Section */}
+        <motion.div {...fadeIn} className="flex flex-col items-center space-y-8">
 
+          <div className="grid lg:grid-cols-2 gap-12 items-center w-full mt-8">
+            <motion.div 
+              className="relative rounded-2xl overflow-hidden shadow-xl"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img
+                src={img1}
+                alt="Caring companion with elderly person"
+                className="w-full h-auto rounded-2xl object-cover"
+              />
+            </motion.div>
 
-      <div className="flex flex-row items-center justify-between flex-wrap gap-8 w-full -mt-24">
-        <div className="flex-1 text-center min-w-0">
-          <img className="w-1/2 max-w-md h-auto rounded-3xl" src={img1} alt="Companion and elderly person" />
-        </div>
-        <div className="flex-1 p-4 text-center min-w-0">
-          <h1 className="text-[#517f68] text-4xl font-bold font-['Yeseva_One'] text-center my-4">Everything Grandkids Do!</h1>
-          <p className="text-2xl font-bold font-['Yeseva_One'] text-center my-4">Spirited, empathetic youth companions for the elderly.</p>
-          <a href="/register" className="inline-block px-8 py-3 bg-[#517f68] text-white rounded hover:bg-[#476a59] text-xl cursor-pointer mt-4 md:text-base md:px-6 md:py-2">
-            Join the Trial!
-          </a>
-        </div>
-      </div>
-
-      <div className="flex items-center justify-center mt-20 bg-[#ffc425] p-8 rounded-lg max-w-7xl w-full md:mt-8 md:p-4">
-        <p className="text-2xl font-bold font-['Yeseva_One'] text-center my-4">
-          We are a team of young graduates with a deep affection for the elderly, dedicated to building meaningful relationships with our "Grandpals."
-        </p>
-      </div>
-
-      <div className="flex flex-row md:flex-col items-center justify-between bg-[#fdf9f4] gap-4 mt-4 p-8 w-full box-border">
-        <div className="flex-1 text-center min-w-0">
-          <img className="w-1/2 md:w-4/5 max-w-md h-auto rounded-3xl" src={img2} alt="Companion and elderly person" />
-        </div>
-        <div className="flex-1 text-center">
-          <h1 className="text-[#517f68] text-4xl font-bold font-['Yeseva_One'] text-center my-4">Experience the Delight of Quality Time</h1>
-          <p className="text-2xl font-bold font-['Yeseva_One'] text-center my-4">Our Goodfellows are always ready to listen with a caring heart.</p>
-        </div>
-      </div>
-
-      <div className="flex flex-row md:flex-col items-center justify-between bg-[#fdf9f4] gap-4 mt-4 p-8 w-full box-border">
-        <div className="flex-1 text-center">
-          <h1 className="text-[#517f68] text-4xl font-bold font-['Yeseva_One'] text-center my-4">Tech-savvy youth bridge the digital divide</h1>
-          <p className="text-2xl font-bold font-['Yeseva_One'] text-center my-4">Our Young Mates are here to guide you through the digital world.</p>
-        </div>
-        <div className="flex-1 text-center min-w-0">
-          <img className="w-1/2 md:w-4/5 max-w-md h-auto rounded-3xl" src={img3} alt="Companion and elderly person" />
-        </div>
-      </div>
-
-      <h1 className="text-[#517f68] text-4xl font-bold font-['Yeseva_One'] text-center my-4">Discover Grandpal's tales.</h1>
-
-      <div className="flex flex-wrap justify-around w-full">
-        {[
-          { text: "Laurentine Castelino is grateful to ElderMate for assisting with daily groceries." },
-          { text: "ElderMate's mate taught me how to shop online, making life easier." },
-          { text: "My ElderMate companion has been a wonderful source of company and support. We go for walks together and have the best conversations. It's like having a friend to share my days with." }
-        ].map((review, index) => (
-          <div key={index} className="flex flex-col w-1/4 md:w-[90%] h-auto bg-[#f2f0e7] p-4 mb-4 text-center">
-            <div className="text-center">
-              <div className="flex justify-center">
-                <img className="w-1/3 max-w-xs h-auto rounded-3xl" src={rev1} alt="Review" />
-              </div>
+            <div className="space-y-6 text-center lg:text-left">
+              <h1 className="text-[#517f68] text-4xl md:text-5xl font-bold leading-tight">
+                Everything Grandkids Do!
+              </h1>
+              <p className="text-2xl md:text-3xl font-medium text-gray-800">
+                Spirited, empathetic youth companions for the elderly.
+              </p>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-[#517f68] text-white text-xl rounded-full shadow-lg hover:bg-[#476a59] transition-all duration-300 font-semibold"
+              >
+                Join the Trial!
+              </motion.button>
             </div>
-            <p className="text-2xl font-bold font-['Yeseva_One'] text-center my-4">{review.text}</p>
           </div>
-        ))}
-      </div>
-    </section>
+        </motion.div>
+
+        {/* Mission Statement */}
+        <motion.div {...fadeIn} className="my-20">
+          <div className="bg-[#ffc425] rounded-2xl p-8 md:p-12 shadow-lg">
+            <p className="text-2xl md:text-3xl font-medium text-center leading-relaxed">
+              We are a team of young graduates with a deep affection for the elderly, 
+              dedicated to building meaningful relationships with our "Grandpals."
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Features Section */}
+        <div className="space-y-24 my-20">
+          <motion.div {...fadeIn} className="grid lg:grid-cols-2 gap-12 items-center">
+            <img
+              src={img2}
+              alt="Quality time with elderly"
+              className="w-full rounded-2xl shadow-lg object-cover"
+            />
+            <div className="space-y-6 text-center lg:text-left">
+              <h2 className="text-[#517f68] text-3xl md:text-4xl font-bold leading-tight">
+                Experience the Delight of Quality Time
+              </h2>
+              <p className="text-xl md:text-2xl font-medium text-gray-800">
+                Our Goodfellows are always ready to listen with a caring heart.
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div {...fadeIn} className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6 text-center lg:text-left order-2 lg:order-1">
+              <h2 className="text-[#517f68] text-3xl md:text-4xl font-bold leading-tight">
+                Tech-savvy youth bridge the digital divide
+              </h2>
+              <p className="text-xl md:text-2xl font-medium text-gray-800">
+                Our Young Mates are here to guide you through the digital world.
+              </p>
+            </div>
+            <img
+              src={img3}
+              alt="Digital assistance"
+              className="w-full rounded-2xl shadow-lg object-cover order-1 lg:order-2"
+            />
+          </motion.div>
+        </div>
+
+        {/* Testimonials */}
+        <motion.div {...fadeIn} className="mt-24">
+          <h2 className="text-[#517f68] text-4xl font-bold text-center mb-12">
+            Discover Grandpal's tales.
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {reviews.map((review, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ y: -10 }}
+                className="bg-[#f2f0e7] rounded-xl p-6 shadow-lg"
+              >
+                <div className="flex justify-center mb-6">
+                  <img
+                    src={rev1}
+                    alt="Review"
+                    className="w-24 h-24 rounded-full object-cover shadow-md"
+                  />
+                </div>
+                <p className="text-lg font-medium text-gray-800 text-center leading-relaxed">
+                  {review.text}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+    </div>
   );
 };
 

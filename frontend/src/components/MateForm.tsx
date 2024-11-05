@@ -44,8 +44,8 @@ export default function MateForm() {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('F:/Eldermate-1/frontend/src/assets/Bg2.png')" }}>
-            <div className="bg-white rounded-lg shadow-lg p-8 max-w-lg w-full">
+        <div className="flex items-center justify-center min-h-screen bg-cover bg-center bg-[#fdf9f4] " style={{ backgroundImage: "url('F:/Eldermate-1/frontend/src/assets/Bg2.png')" }}>
+            <div className="bg-[#eee7de] rounded-lg shadow-lg p-8 max-w-lg w-full">
                 <h2 className="text-2xl font-semibold text-center text-gray-700 mb-6">Mate's Info</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">

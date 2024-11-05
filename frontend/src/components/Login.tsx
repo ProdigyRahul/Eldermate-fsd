@@ -31,42 +31,51 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row h-screen w-full bg-[#fdf9f4] items-center">
-
-      <div className="flex-1 flex items-center justify-center md:ml-12 md:mt-12 max-w-md">
-        <img src={log} alt="Login Illustration" className="w-full h-full object-cover" />
+    <div className="flex flex-col md:flex-row w-full h-screen bg-[#fdf9f4] overflow-hidden">
+      <div className="flex flex-1 items-center justify-center p-4">
+        <img src={log} className="max-w-sm md:max-w-md h-auto object-cover rounded-lg" alt="Login" /> {/* Adjusted image size */}
       </div>
 
-      <div className="flex-1 flex justify-center items-center p-4">
-        <div className="bg-white font-serif p-8 rounded-lg shadow-lg w-full max-w-md text-[#517f68]"> {/* Set bg-white for the login box */}
-          <h2 className="text-2xl font-bold mb-6">Login</h2>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="email" className="block text-left mb-2 font-bold">Email:</label>
+      <div className="flex flex-1 items-center justify-center p-4">
+        <div className="bg-white font-serif p-8 rounded-lg shadow-lg w-full max-w-md text-[#517f68]">
+          <h2 className="text-3xl font-bold mb-6 text-center">Login</h2>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <label htmlFor="email" className="block text-left font-semibold">
+              Email:
+            </label>
             <input
               type="email"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="block w-full p-3 mb-4 border border-gray-300 rounded focus:outline-none"
+              className="w-full p-3 border border-[#517f68] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#517f68] transition duration-200"
             />
 
-            <label htmlFor="password" className="block text-left mb-2 font-bold">Password:</label>
+            <label htmlFor="password" className="block text-left font-semibold">
+              Password:
+            </label>
             <input
               type="password"
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="block w-full p-3 mb-4 border border-gray-300 rounded focus:outline-none"
+              className="w-full p-3 border border-[#517f68] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#517f68] transition duration-200"
             />
 
-            <button type="submit" className="block text-center w-full p-3 bg-green-700 text-white rounded hover:bg-gray-300">
+            <button
+              type="submit"
+              className="block w-full p-3 bg-[#517f68] text-white rounded-lg transition duration-200 hover:bg-[#3f6b5a] transform hover:scale-105"
+            >
               Login
             </button>
           </form>
-          <p className="text-center mt-4">
-            New to ElderMate? <Link to='/register' className="text-green-700 underline">Register Now</Link>
+          <p className="mt-4 text-center">
+            New to ElderMate?{' '}
+            <Link to="/register" className="text-[#517f68] hover:underline">
+              Register Now
+            </Link>
           </p>
         </div>
       </div>

@@ -50,8 +50,8 @@ const CompleteProfile: React.FC = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('F:\Eldermate-fsd\frontend\src\assets\Bg2.png')" }}>
-            <div className="border-2 border-ridge-600 rounded-lg bg-white bg-opacity-90 p-8 max-w-lg w-full shadow-lg">
+        <div className="flex items-center justify-center min-h-screen bg-cover bg-center bg-[#fdf9f4]" style={{ backgroundImage: "url('F:\Eldermate-fsd\frontend\src\assets\Bg2.png')" }}>
+            <div className="border-2 border-ridge-600 rounded-lg bg-[#eee7de] bg-opacity-90 p-8 max-w-lg w-full shadow-lg">
                 <h2 className="text-2xl font-serif text-teal-700 mb-4 text-center">Complete Your Profile</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="form-group">

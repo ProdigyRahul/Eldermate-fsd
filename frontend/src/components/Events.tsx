@@ -5,7 +5,7 @@ import ev3 from '../assets/Event 3.jpg';
 
 function Events() {
   return (
-    <div className="bg-white p-8">
+    <div className="bg-[#fdf9f4]  p-8">
       <h1 className="text-[#517f68] font-serif text-4xl mb-8 text-center">Events</h1>
       <div className="flex justify-center flex-wrap gap-8 overflow-x-auto snap-x snap-mandatory px-4 pb-4 scrollbar-hide">
         <div className="bg-white rounded-lg p-8 shadow-lg max-w-4xl">

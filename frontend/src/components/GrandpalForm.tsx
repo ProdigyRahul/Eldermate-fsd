@@ -42,8 +42,8 @@ const GrandpalForm: React.FC = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('F:/Eldermate-1/frontend/src/assets/Bg2.png')" }}>
-            <div className="bg-white bg-opacity-80 rounded-lg shadow-lg p-6 max-w-md w-full">
+        <div className="flex items-center justify-center min-h-screen bg-cover bg-center bg-[#fdf9f4] " style={{ backgroundImage: "url('F:/Eldermate-1/frontend/src/assets/Bg2.png')" }}>
+            <div className="bg-[#eee7de]  bg-opacity-80 rounded-lg shadow-lg p-6 max-w-md w-full">
                 <h2 className="text-2xl font-bold text-center mb-4 text-teal-700">Grandpal's Info</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">

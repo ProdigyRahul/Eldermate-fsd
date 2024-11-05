@@ -48,7 +48,7 @@ const Services = () => {
   };
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 bg-[#fdf9f4] ">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-serif text-emerald-800 text-center mb-8">
           Our Services

@@ -1,22 +1,29 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo1.png';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#FCF8F1] bg-opacity-30">
+    <header className="bg-[#fdf9f4] bg-opacity-90 shadow-md">
       <div className="px-4 mx-auto sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex">
-              <span className="text-2xl font-bold">Eldermate</span>
+            <Link to="/" className="flex items-center">
+              <img
+                src={logo}
+                alt="Eldermate Logo"
+                className="w-[180px] h-[40px] object-contain" 
+              />
             </Link>
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             type="button"
-            className="inline-flex p-2 text-black transition-all duration-200 rounded-md lg:hidden focus:bg-gray-100 hover:bg-gray-100"
+            className="inline-flex p-2 text-gray-800 transition duration-200 rounded-md lg:hidden focus:outline-none hover:bg-gray-200"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <svg
@@ -39,38 +46,30 @@ const Navbar: React.FC = () => {
             </svg>
           </button>
 
-          <div className="hidden lg:flex lg:items-center lg:justify-center lg:space-x-10">
-            <Link to="/about" className="text-base text-black transition-all duration-200 hover:text-opacity-80">
-              About
-            </Link>
-            <Link to="/events" className="text-base text-black transition-all duration-200 hover:text-opacity-80">
-              Events
-            </Link>
-            <Link to="/events" className="text-base text-black transition-all duration-200 hover:text-opacity-80">
-              Services
-            </Link>
-            <Link to="/testimonials" className="text-base text-black transition-all duration-200 hover:text-opacity-80">
-              Testimonials
-            </Link>
-            <Link to="/events" className="text-base text-black transition-all duration-200 hover:text-opacity-80">
-              Connections
-            </Link>
-            <Link to="/contact" className="text-base text-black transition-all duration-200 hover:text-opacity-80">
-              Contact
-            </Link>
+          {/* Links */}
+          <div className={`lg:flex ${isMenuOpen ? 'block' : 'hidden'} space-y-4 lg:space-y-0 lg:space-x-8 text-center lg:text-left`}>
+            {['About', 'Events', 'Services', 'Testimonials', 'Connections', 'Contact'].map((item) => (
+              <Link
+                key={item}
+                to={`/${item.toLowerCase()}`}
+                className="text-base text-gray-800 transition duration-200 hover:text-gray-600"
+              >
+                {item}
+              </Link>
+            ))}
           </div>
 
+          {/* Buttons */}
           <div className="hidden lg:flex lg:items-center lg:space-x-4">
             <Link
               to="/login"
-              className="text-base text-black transition-all duration-200 hover:text-opacity-80"
+              className="text-base text-gray-800 transition duration-200 hover:text-gray-600"
             >
               Login
             </Link>
             <Link
-              to="/register"
-              className="inline-flex items-center justify-center px-5 py-2.5 text-base transition-all duration-200 hover:bg-yellow-300 hover:text-black focus:text-black focus:bg-yellow-300 font-semibold text-white bg-black rounded-full"
-            >
+  to="/register"
+  className="inline-flex items-center justify-center px-5 py-2.5 text-base font-semibold text-white transition duration-200 bg-[#517f68] rounded-full transform hover:scale-110 hover:text-white">
               Register
             </Link>
           </div>
