@@ -46,8 +46,14 @@ const Navbar: React.FC = () => {
             <Link to="/events" className="text-base text-black transition-all duration-200 hover:text-opacity-80">
               Events
             </Link>
+            <Link to="/events" className="text-base text-black transition-all duration-200 hover:text-opacity-80">
+              Services
+            </Link>
             <Link to="/testimonials" className="text-base text-black transition-all duration-200 hover:text-opacity-80">
               Testimonials
+            </Link>
+            <Link to="/events" className="text-base text-black transition-all duration-200 hover:text-opacity-80">
+              Connections
             </Link>
             <Link to="/contact" className="text-base text-black transition-all duration-200 hover:text-opacity-80">
               Contact
