@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import reg from '../assets/register1.jpg';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/700.css';
 
 const Register: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -37,13 +39,13 @@ const Register: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row w-full h-screen bg-[#fdf9f4] overflow-hidden"> {/* Use overflow-hidden */}
+    <div className="flex flex-col md:flex-row w-full h-screen bg-[#fdf9f4] overflow-hidden">
       <div className="flex flex-1 items-center justify-center p-4">
-        <img src={reg} className="max-w-full max-h-[80vh] object-cover rounded-lg" alt="Register" /> {/* Limit height */}
+        <img src={reg} className="max-w-full max-h-[80vh] object-cover rounded-lg" alt="Register" />
       </div>
 
       <div className="flex flex-1 items-center justify-center p-4">
-        <div className="bg-white font-serif p-8 rounded-lg shadow-lg w-full max-w-md text-[#517f68]">
+        <div className="bg-white font-roboto p-8 rounded-lg shadow-lg w-full max-w-md text-[#517f68]">
           <h2 className="text-3xl font-bold mb-6 text-center">Register</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <label htmlFor="email" className="block text-left font-semibold">
@@ -79,7 +81,7 @@ const Register: React.FC = () => {
           </form>
           <p className="mt-4 text-center">
             Already registered?{' '}
-            <Link to="/login" className="text-[#517f68] hover:underline">
+            <Link to="/login" className="text-[#517f68] hover:underline font-bold">
               Login Now
             </Link>
           </p>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import log from '../assets/Login.png';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/700.css';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -33,11 +35,11 @@ const Login: React.FC = () => {
   return (
     <div className="flex flex-col md:flex-row w-full h-screen bg-[#fdf9f4] overflow-hidden">
       <div className="flex flex-1 items-center justify-center p-4">
-        <img src={log} className="max-w-sm md:max-w-md h-auto object-cover rounded-lg" alt="Login" /> {/* Adjusted image size */}
+        <img src={log} className="max-w-sm md:max-w-md h-auto object-cover rounded-lg" alt="Login" />
       </div>
 
       <div className="flex flex-1 items-center justify-center p-4">
-        <div className="bg-white font-serif p-8 rounded-lg shadow-lg w-full max-w-md text-[#517f68]">
+        <div className="bg-white font-roboto p-8 rounded-lg shadow-lg w-full max-w-md text-[#517f68]">
           <h2 className="text-3xl font-bold mb-6 text-center">Login</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <label htmlFor="email" className="block text-left font-semibold">
@@ -73,7 +75,7 @@ const Login: React.FC = () => {
           </form>
           <p className="mt-4 text-center">
             New to ElderMate?{' '}
-            <Link to="/register" className="text-[#517f68] hover:underline">
+            <Link to="/register" className="text-[#517f68] hover:underline font-bold">
               Register Now
             </Link>
           </p>
