@@ -4,7 +4,6 @@ import img1 from '../assets/home1.jpg';
 import img2 from '../assets/home2.jpg';
 import img3 from '../assets/home3.jpg';
 import rev1 from '../assets/rev1.png';
-import logo from '../assets/logo2.png';
 import '@fontsource/poppins/400.css';
 import '@fontsource/poppins/700.css';
 
@@ -31,7 +30,6 @@ const Home: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}
         <motion.div {...fadeIn} className="flex flex-col items-center space-y-8">
-
           <div className="grid lg:grid-cols-2 gap-12 items-center w-full mt-8">
             <motion.div 
               className="relative rounded-2xl overflow-hidden shadow-xl"
@@ -76,10 +74,12 @@ const Home: React.FC = () => {
         {/* Features Section */}
         <div className="space-y-24 my-20">
           <motion.div {...fadeIn} className="grid lg:grid-cols-2 gap-12 items-center">
-            <img
+            <motion.img
               src={img2}
               alt="Quality time with elderly"
               className="w-full rounded-2xl shadow-lg object-cover"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
             />
             <div className="space-y-6 text-center lg:text-left">
               <h2 className="text-[#517f68] text-3xl md:text-4xl font-bold leading-tight">
@@ -100,10 +100,12 @@ const Home: React.FC = () => {
                 Our Young Mates are here to guide you through the digital world.
               </p>
             </div>
-            <img
+            <motion.img
               src={img3}
               alt="Digital assistance"
               className="w-full rounded-2xl shadow-lg object-cover order-1 lg:order-2"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
             />
           </motion.div>
         </div>
