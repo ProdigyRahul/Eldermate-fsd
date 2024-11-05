@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Events from "./components/Events";
+import Services from "./components/Services";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Testimonials from "./components/Testimonials";
@@ -25,6 +26,7 @@ function App() {
                   <Home />
                   <About />
                   <Events />
+                  <Services />
                   <Testimonials />
                   <Contact />
                 </main>
@@ -35,6 +37,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/events" element={<Events />} />
+            <Route path="/services" element={<Services />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/testimonials" element={<Testimonials />} />
