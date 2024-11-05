@@ -11,6 +11,7 @@ import Register from "./components/Register";
 import Testimonials from "./components/Testimonials";
 import CompleteProfile from "./components/CompleteProfile";
 import GrandpalForm from "./components/GrandpalForm";
+import MateForm from "./components/MateForm";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
                   <Contact />
                   <CompleteProfile />
                   <GrandpalForm />
+                  <MateForm />
                 </main>
               }
             />
@@ -47,6 +49,7 @@ function App() {
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/completeProfile" element={<CompleteProfile />} />
             <Route path="/grandpalForm" element={<GrandpalForm />} />
+            <Route path="/mateForm" element={<MateForm />} />
           </Routes>
         </div>
       </Router>
