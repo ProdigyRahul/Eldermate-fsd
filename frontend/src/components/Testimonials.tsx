@@ -1,20 +1,50 @@
 import React from 'react';
+import TestimonialCard from './TestimonialsCard';
+import rev1 from '../assets/rev1.png';
+import rev2 from '../assets/rev2.png';
+import rev3 from '../assets/rev3.png';
 
 const Testimonials: React.FC = () => {
+  const testimonialsData = [
+    {
+      backgroundColor: '#ccd5co',
+      clientName: 'Laurentine Castelino',
+      testimonialText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
+      rating: 5,
+      imageURL: rev1,
+    },
+    {
+      backgroundColor: '#ccd5co',
+      clientName: 'XYZ Mistry',
+      testimonialText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
+      rating: 4,
+      imageURL: rev2,
+    },
+    {
+      backgroundColor: '#ccd5co',
+      clientName: 'Mr and Mrs Mehta',
+      testimonialText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
+      rating: 5,
+      imageURL: rev3,
+    },
+  ];
+
   return (
-    <section className="py-16 bg-[#fdf9f4] ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">What People Say</h2>
-          <p className="mt-4 text-lg text-gray-600">
-            Hear from our community members and caregivers.
-          </p>
-        </div>
-        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {/* Add testimonials content here */}
-        </div>
+    <div className="p-5">
+      <h1 className="text-3xl font-bold text-center mb-5">Discover Grandpal's Tales</h1>
+      <div className="flex overflow-x-auto p-4 gap-4 justify-center items-center">
+        {testimonialsData.map((testimonial, index) => (
+          <TestimonialCard
+            key={index}
+            backgroundColor={testimonial.backgroundColor}
+            clientName={testimonial.clientName}
+            testimonialText={testimonial.testimonialText}
+            rating={testimonial.rating}
+            imageURL={testimonial.imageURL}
+          />
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
 
