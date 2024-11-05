@@ -18,6 +18,7 @@ import ActivityLog from "./components/ActivityLog";
 import RatingAndFeedback from "./components/RatingandFeedback";
 
 
+
 function App() {
   return (
     <>
@@ -43,6 +44,7 @@ function App() {
                   <MyEvents />
                   <ActivityLog />
                   <RatingAndFeedback />
+
                 </main>
               }
             />

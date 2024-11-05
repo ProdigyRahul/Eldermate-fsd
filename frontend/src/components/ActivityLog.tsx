@@ -11,21 +11,21 @@ const ActivityLog: React.FC = () => {
     const [activityLog, setActivityLog] = useState<ActivityLogItem[]>([
         {
             id: '1',
-            date: '2023-05-01',
-            title: 'Volunteered at Food Drive',
-            description: 'Helped collect and distribute food to local families in need.',
+            date: '2023-07-01',
+            title: 'Monsoon Trek',
+            description: 'Rainy evening in the mountains was mesmerising.',
         },
         {
             id: '2',
-            date: '2023-04-15',
-            title: 'Participated in Charity Gala',
-            description: 'Attended the event and helped with setup and cleanup.',
+            date: '2024-04-04',
+            title: 'Garden Workshop',
+            description: 'It was a memorable morning in the garden learning something new',
         },
         {
             id: '3',
-            date: '2023-03-25',
-            title: 'Organized Community Clean-up',
-            description: 'Coordinated a team of volunteers to clean up a local park.',
+            date: '2024-03-25',
+            title: 'Young At Heart',
+            description: 'Particpated in a fun filled evening with my fellow Mates.',
         },
     ]);
 
