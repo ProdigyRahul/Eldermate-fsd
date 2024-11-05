@@ -12,6 +12,10 @@ import Testimonials from "./components/Testimonials";
 import CompleteProfile from "./components/CompleteProfile";
 import GrandpalForm from "./components/GrandpalForm";
 import MateForm from "./components/MateForm";
+import MyProfile from "./components/MyProfile";
+import MyEvents from "./components/MyEvents";
+import ActivityLog from "./components/ActivityLog";
+import RatingAndFeedback from "./components/RatingandFeedback";
 
 
 function App() {
@@ -35,6 +39,10 @@ function App() {
                   <CompleteProfile />
                   <GrandpalForm />
                   <MateForm />
+                  <MyProfile />
+                  <MyEvents />
+                  <ActivityLog />
+                  <RatingAndFeedback />
                 </main>
               }
             />
@@ -50,6 +58,9 @@ function App() {
             <Route path="/completeProfile" element={<CompleteProfile />} />
             <Route path="/grandpalForm" element={<GrandpalForm />} />
             <Route path="/mateForm" element={<MateForm />} />
+            <Route path="/myEvents" element={<MyEvents />} />
+            <Route path="/activityLog" element={<ActivityLog />} />
+            <Route path="/ratingAndFeedback" element={<RatingAndFeedback />} />
           </Routes>
         </div>
       </Router>
