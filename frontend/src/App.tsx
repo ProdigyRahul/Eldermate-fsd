@@ -9,6 +9,7 @@ import Services from "./components/Services";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Testimonials from "./components/Testimonials";
+import CompleteProfile from "./components/CompleteProfile";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
                   <Services />
                   <Testimonials />
                   <Contact />
+                  <CompleteProfile />
                 </main>
               }
             />
@@ -41,6 +43,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/completeProfile" element={<CompleteProfile />} />
           </Routes>
         </div>
       </Router>
