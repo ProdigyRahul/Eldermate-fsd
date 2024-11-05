@@ -10,6 +10,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Testimonials from "./components/Testimonials";
 import CompleteProfile from "./components/CompleteProfile";
+import GrandpalForm from "./components/GrandpalForm";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                   <Testimonials />
                   <Contact />
                   <CompleteProfile />
+                  <GrandpalForm />
                 </main>
               }
             />
@@ -44,6 +46,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/completeProfile" element={<CompleteProfile />} />
+            <Route path="/grandpalForm" element={<GrandpalForm />} />
           </Routes>
         </div>
       </Router>
