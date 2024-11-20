@@ -37,19 +37,19 @@ function App() {
                   <Services />
                   <Testimonials />
                   <Contact />
-                  <CompleteProfile />
+                  {/* <CompleteProfile />
                   <GrandpalForm />
                   <MateForm />
                   <MyProfile />
                   <MyEvents />
                   <ActivityLog />
-                  <RatingAndFeedback />
+                  <RatingAndFeedback /> */}
 
                 </main>
               }
             />
 
-            {/* Individual page routes */}
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/events" element={<Events />} />

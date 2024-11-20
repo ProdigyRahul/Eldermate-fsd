@@ -145,7 +145,8 @@ export default function MateForm() {
                             className="mt-1 block w-full border border-gray-300 rounded-md p-2"
                         />
                     </div>
-                    <button type="submit" className="mt-4 w-full bg-green-600 text-white font-semibold py-2 rounded-md hover:bg-green-500 transition duration-200">Submit</button>
+                    <button type="submit" className="mt-4 w-full bg-green-600 text-white font-semibold py-2 rounded-md hover:bg-green-500 transition duration-200">
+                    </button>
                 </form>
             </div>
         </div>

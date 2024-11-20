@@ -76,7 +76,8 @@ const Register: React.FC = () => {
               type="submit"
               className="block w-full p-3 bg-[#517f68] text-white rounded-lg transition duration-200 hover:bg-[#3f6b5a] transform hover:scale-105"
             >
-              Register
+              <Link to='/completeProfile'>Register</Link>
+
             </button>
           </form>
           <p className="mt-4 text-center">

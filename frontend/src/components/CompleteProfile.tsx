@@ -167,7 +167,7 @@ const CompleteProfile: React.FC = () => {
                     <div className="form-group">
                         <label className="block text-left">Select Your Role:</label>
                         <div className='flex gap-4 mt-2'>
-                            <Link to="/mate-details" className='w-full bg-teal-600 text-white rounded-md py-2 text-center'>Mate</Link>
+                            <Link to="/mateForm" className='w-full bg-teal-600 text-white rounded-md py-2 text-center'>Mate</Link>
                             <Link to="/grandpalForm" className='w-full bg-teal-600 text-white rounded-md py-2 text-center'>Grandpal</Link>
                         </div>
                     </div>
